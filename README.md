@@ -24,7 +24,7 @@
 | PyTorch | 2.3.1+cu121 |
 | CUDA | PyTorch CUDA 12.1 |
 
-模型权重放在 `ckpts/unifolm_wma_dual.ckpt`。输入文件按赛题目录放在 `unitree_g1_pack_camera/case1/`。仓库中的 `input_sha256.txt` 可以核对各次实验是否使用了相同输入和权重。
+模型权重从 [UnifoLM-WMA-0-Dual](https://huggingface.co/unitreerobotics/UnifoLM-WMA-0-Dual) 获取，放在 `ckpts/unifolm_wma_dual.ckpt`。Case 输入从赛题仓库获取，按 `unitree_g1_pack_camera/case1/` 放置。仓库中的 `input_sha256.txt` 可以核对各次实验是否使用了相同输入和权重。
 
 ## 运行方法
 
