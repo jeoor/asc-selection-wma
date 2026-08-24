@@ -15,7 +15,7 @@
 
 | 项目 | 内容 |
 | --- | --- |
-| 机器来源 | 自备云服务器（AutoDL / SeetaCloud） |
+| 机器来源 | 自备付费云服务器（AutoDL / SeetaCloud） |
 | 操作系统 | Ubuntu 22.04.1 LTS |
 | CPU | Intel Xeon Gold 6348，分配 14 vCPU |
 | 内存 | 120 GiB |
@@ -84,11 +84,12 @@ FP16 和 BF16 都明显降低了 DDIM 采样的计算时间。BF16 的总时间�
 
 四次实验的输入和权重哈希一致，程序都正常完成 11 轮并生成 H.264、512×320、8 FPS、176 帧、22 秒的视频。PSNR 使用同一个 `psnr_score_for_challenge.py` 计算，评价方式没有修改。
 
+Baseline 和 FP16 在 8 月 13 日运行，BF16 和 `inference_mode()` 在 8 月 24 日使用相同磁盘镜像重新创建的服务器上运行。GPU 型号、资源配额、软件环境、代码提交和输入哈希相同。每组只完整运行一次，所以不把 1% 以内的时间差当作有效提升。
+
 ## 文件说明
 
 - `patches/`：优化源码补丁。
 - `scripts/`：统一实验脚本，自动记录时间、GPU、PSNR、视频信息和输入哈希。
 - `results/summary.csv`：四组结果汇总。
-- `results/<experiment>/`：运行日志、GPU 记录、PSNR、视频信息和复现信息。
+- `results/<experiment>/`：运行日志、GPU 记录、PSNR、视频信息和复现信息。`environment.txt` 的标题由培训提供的环境采集脚本生成，文件中的系统信息对应实际云服务器。
 - `figures/`：结果对比图。
-
