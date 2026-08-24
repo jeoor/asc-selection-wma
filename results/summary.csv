@@ -1,0 +1,5 @@
+experiment,change,total_time_s,speedup,psnr_db,psnr_delta_db,gpu_util_avg_pct,peak_memory_mib,video_frames,status
+baseline,none,855.153,1.000,35.615362,0.000000,85.09,19321,176,normal
+amp_fp16,CUDA autocast FP16,410.408,2.084,32.466923,-3.148439,67.51,23205,176,normal
+bf16,CUDA autocast BF16,401.001,2.133,28.113758,-7.501604,68.52,23249,176,normal
+inference_mode,torch.inference_mode,854.775,1.000,35.683527,0.068165,85.30,19239,176,normal

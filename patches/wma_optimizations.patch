@@ -1,0 +1,47 @@
+diff --git a/scripts/evaluation/world_model_interaction.py b/scripts/evaluation/world_model_interaction.py
+index ccc9747..75da3fe 100644
+--- a/scripts/evaluation/world_model_interaction.py
++++ b/scripts/evaluation/world_model_interaction.py
+@@ -9,6 +9,7 @@ import logging
+ import einops
+ import warnings
+ import imageio
++from contextlib import nullcontext
+ 
+ from pytorch_lightning import seed_everything
+ from omegaconf import OmegaConf
+@@ -798,6 +799,13 @@ def get_parser():
+                         type=int,
+                         default=8,
+                         help="fps for the saving video")
++    parser.add_argument("--amp_dtype",
++                        choices=("none", "fp16", "bf16"),
++                        default="none",
++                        help="CUDA autocast dtype used for inference")
++    parser.add_argument("--inference_mode",
++                        action="store_true",
++                        help="disable autograd bookkeeping during inference")
+     return parser
+ 
+ 
+@@ -809,4 +817,19 @@ if __name__ == '__main__':
+         seed = random.randint(0, 2**31)
+     seed_everything(seed)
+     rank, gpu_num = 0, 1
+-    run_inference(args, gpu_num, rank)
++    amp_context = nullcontext()
++    if args.amp_dtype != "none":
++        amp_dtype = {
++            "fp16": torch.float16,
++            "bf16": torch.bfloat16,
++        }[args.amp_dtype]
++        print(f">>> CUDA AMP enabled: {args.amp_dtype}")
++        amp_context = torch.autocast(device_type="cuda", dtype=amp_dtype)
++
++    inference_context = nullcontext()
++    if args.inference_mode:
++        print(">>> torch.inference_mode enabled")
++        inference_context = torch.inference_mode()
++
++    with inference_context, amp_context:
++        run_inference(args, gpu_num, rank)

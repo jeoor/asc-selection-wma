@@ -1,0 +1,136 @@
+command=/root/autodl-tmp/WMA_HW4/wma-env/bin/python scripts/evaluation/world_model_interaction.py --seed 123 --ckpt_path ckpts/unifolm_wma_dual.ckpt --config configs/inference/world_model_interaction.yaml --savedir /root/autodl-tmp/WMA_HW4/experiment_results/bf16_a800_20260824_01/output --bs 1 --height 320 --width 512 --unconditional_guidance_scale 1.0 --ddim_steps 50 --ddim_eta 1.0 --prompt_dir unitree_g1_pack_camera/case1/world_model_interaction_prompts --dataset unitree_g1_pack_camera --video_length 16 --frame_stride 6 --n_action_steps 16 --exe_steps 16 --n_iter 11 --timestep_spacing uniform_trailing --guidance_rescale 0.7 --perframe_ae --amp_dtype bf16
+start=2026-08-24 19:50:43 +0800
+
+2026-08-24 19:50:47.781917: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-08-24 19:50:47.820848: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-08-24 19:50:47.820871: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-08-24 19:50:47.822269: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2026-08-24 19:50:47.828530: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-08-24 19:50:48.646319: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Global seed set to 123
+>>> CUDA AMP enabled: bf16
+INFO:mainlogger:LatentVisualDiffusion: Running in v-prediction mode
+INFO:unifolm_wma.models.diffusion_head.conditional_unet1d:number of parameters: 5.010531e+08
+INFO:unifolm_wma.models.diffusion_head.conditional_unet1d:number of parameters: 5.010531e+08
+AE working on z of shape (1, 4, 32, 32) = 4096 dimensions.
+INFO:root:Loaded ViT-H-14 model config.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): hf-mirror.com:443
+DEBUG:urllib3.connectionpool:https://hf-mirror.com:443 "HEAD /laion/CLIP-ViT-H-14-laion2B-s32B-b79K/resolve/main/open_clip_pytorch_model.bin HTTP/1.1" 302 0
+INFO:root:Loading pretrained ViT-H-14 weights (laion2b_s32b_b79k).
+INFO:root:Loaded ViT-H-14 model config.
+DEBUG:urllib3.connectionpool:https://hf-mirror.com:443 "HEAD /laion/CLIP-ViT-H-14-laion2B-s32B-b79K/resolve/main/open_clip_pytorch_model.bin HTTP/1.1" 302 0
+INFO:root:Loading pretrained ViT-H-14 weights (laion2b_s32b_b79k).
+>>> model checkpoint loaded.
+>>> Load pre-trained model ...
+INFO:root:***** Configing Data *****
+>>> unitree_z1_stackbox: 1 data samples loaded.
+>>> unitree_z1_stackbox: data stats loaded.
+>>> unitree_z1_stackbox: normalizer initiated.
+>>> unitree_z1_dual_arm_stackbox: 1 data samples loaded.
+>>> unitree_z1_dual_arm_stackbox: data stats loaded.
+>>> unitree_z1_dual_arm_stackbox: normalizer initiated.
+>>> unitree_z1_dual_arm_stackbox_v2: 1 data samples loaded.
+>>> unitree_z1_dual_arm_stackbox_v2: data stats loaded.
+>>> unitree_z1_dual_arm_stackbox_v2: normalizer initiated.
+>>> unitree_z1_dual_arm_cleanup_pencils: 1 data samples loaded.
+>>> unitree_z1_dual_arm_cleanup_pencils: data stats loaded.
+>>> unitree_z1_dual_arm_cleanup_pencils: normalizer initiated.
+>>> unitree_g1_pack_camera: 1 data samples loaded.
+>>> unitree_g1_pack_camera: data stats loaded.
+>>> unitree_g1_pack_camera: normalizer initiated.
+>>> Dataset is successfully loaded ...
+>>> Generate 16 frames under each generation ...
+DEBUG:h5py._conv:Creating converter from 3 to 5
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 62 4096
+  0%|          | 0/11 [00:00<?, ?it/s]>>> Step 0: generating actions ...
+>>> Step 0: interacting with world model ...
+DEBUG:PIL.Image:Importing BlpImagePlugin
+DEBUG:PIL.Image:Importing BmpImagePlugin
+DEBUG:PIL.Image:Importing BufrStubImagePlugin
+DEBUG:PIL.Image:Importing CurImagePlugin
+DEBUG:PIL.Image:Importing DcxImagePlugin
+DEBUG:PIL.Image:Importing DdsImagePlugin
+DEBUG:PIL.Image:Importing EpsImagePlugin
+DEBUG:PIL.Image:Importing FitsImagePlugin
+DEBUG:PIL.Image:Importing FitsStubImagePlugin
+DEBUG:PIL.Image:Importing FliImagePlugin
+DEBUG:PIL.Image:Importing FpxImagePlugin
+DEBUG:PIL.Image:Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing FtexImagePlugin
+DEBUG:PIL.Image:Importing GbrImagePlugin
+DEBUG:PIL.Image:Importing GifImagePlugin
+DEBUG:PIL.Image:Importing GribStubImagePlugin
+DEBUG:PIL.Image:Importing Hdf5StubImagePlugin
+DEBUG:PIL.Image:Importing IcnsImagePlugin
+DEBUG:PIL.Image:Importing IcoImagePlugin
+DEBUG:PIL.Image:Importing ImImagePlugin
+DEBUG:PIL.Image:Importing ImtImagePlugin
+DEBUG:PIL.Image:Importing IptcImagePlugin
+DEBUG:PIL.Image:Importing JpegImagePlugin
+DEBUG:PIL.Image:Importing Jpeg2KImagePlugin
+DEBUG:PIL.Image:Importing McIdasImagePlugin
+DEBUG:PIL.Image:Importing MicImagePlugin
+DEBUG:PIL.Image:Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing MpegImagePlugin
+DEBUG:PIL.Image:Importing MpoImagePlugin
+DEBUG:PIL.Image:Importing MspImagePlugin
+DEBUG:PIL.Image:Importing PalmImagePlugin
+DEBUG:PIL.Image:Importing PcdImagePlugin
+DEBUG:PIL.Image:Importing PcxImagePlugin
+DEBUG:PIL.Image:Importing PdfImagePlugin
+DEBUG:PIL.Image:Importing PixarImagePlugin
+DEBUG:PIL.Image:Importing PngImagePlugin
+DEBUG:PIL.Image:Importing PpmImagePlugin
+DEBUG:PIL.Image:Importing PsdImagePlugin
+DEBUG:PIL.Image:Importing QoiImagePlugin
+DEBUG:PIL.Image:Importing SgiImagePlugin
+DEBUG:PIL.Image:Importing SpiderImagePlugin
+DEBUG:PIL.Image:Importing SunImagePlugin
+DEBUG:PIL.Image:Importing TgaImagePlugin
+DEBUG:PIL.Image:Importing TiffImagePlugin
+DEBUG:PIL.Image:Importing WebPImagePlugin
+DEBUG:PIL.Image:Importing WmfImagePlugin
+DEBUG:PIL.Image:Importing XbmImagePlugin
+DEBUG:PIL.Image:Importing XpmImagePlugin
+DEBUG:PIL.Image:Importing XVThumbImagePlugin
+  9%|▉         | 1/11 [00:29<04:54, 29.41s/it] 18%|█▊        | 2/11 [00:58<04:21, 29.09s/it] 27%|██▋       | 3/11 [01:27<03:52, 29.08s/it] 36%|███▋      | 4/11 [01:56<03:23, 29.12s/it] 45%|████▌     | 5/11 [02:25<02:55, 29.18s/it] 55%|█████▍    | 6/11 [02:54<02:25, 29.14s/it] 64%|██████▎   | 7/11 [03:23<01:56, 29.10s/it] 73%|███████▎  | 8/11 [03:52<01:27, 29.07s/it] 82%|████████▏ | 9/11 [04:21<00:58, 29.04s/it] 91%|█████████ | 10/11 [04:50<00:29, 29.03s/it]100%|██████████| 11/11 [05:19<00:00, 29.05s/it]100%|██████████| 11/11 [05:19<00:00, 29.09s/it]
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 1: generating actions ...
+>>> Step 1: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 2: generating actions ...
+>>> Step 2: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 3: generating actions ...
+>>> Step 3: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 4: generating actions ...
+>>> Step 4: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 5: generating actions ...
+>>> Step 5: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 6: generating actions ...
+>>> Step 6: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 7: generating actions ...
+>>> Step 7: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 8: generating actions ...
+>>> Step 8: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 9: generating actions ...
+>>> Step 9: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 10: generating actions ...
+>>> Step 10: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+
+real	6m41.001s
+user	24m3.164s
+sys	1m34.794s
+
+end=2026-08-24 19:57:24 +0800

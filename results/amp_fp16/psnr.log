@@ -1,0 +1,7 @@
+Comparing:
+Ref: unitree_g1_pack_camera/case1/unitree_g1_pack_camera_case1.mp4
+Pred: /root/autodl-tmp/WMA_HW4/experiment_results/amp_fp16_a800_20260813_01/output/inference/0_full_fs6.mp4
+------------------------------
+Video PSNR: 32.4669 dB
+------------------------------
+Result saved to /root/autodl-tmp/WMA_HW4/experiment_results/amp_fp16_a800_20260813_01/psnr_result.json

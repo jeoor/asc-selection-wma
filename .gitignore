@@ -1,0 +1,9 @@
+ckpts/
+*.ckpt
+*.pt
+*.pth
+*.mp4
+*.h5
+hf-cache/
+wma-env/
+__pycache__/

@@ -1,0 +1,6 @@
+cgroup_memory_limit_bytes=128849018880
+model_commit=3e198de68de55f93f24b3ad623dd499390aaee45
+homework_commit=b1993cba9119301d46ef9214f246df1886910e13
+amp_dtype=none
+inference_mode=1
+n_iter=11

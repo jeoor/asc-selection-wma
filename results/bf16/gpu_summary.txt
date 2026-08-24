@@ -1,0 +1,8 @@
+rows=401
+gpu_name=NVIDIA A800 80GB PCIe
+gpu_util_avg=68.52%
+gpu_util_max=100.00%
+mem_util_avg=25.75%
+mem_util_max=40.00%
+mem_used_avg=19595.03 MiB
+mem_used_max=23249.00 MiB
