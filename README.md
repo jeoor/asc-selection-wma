@@ -10,14 +10,14 @@
 
 - 赛题仓库：<https://github.com/ASC-Competition/ASC26-Embodied-World-Model-Optimization>
 - 项目仓库：<https://github.com/unitreerobotics/unifolm-world-model-action>
-- 项目提交：`3e198de68de55f93f24b3ad623dd499390aaee45`
+- 代码提交号：`3e198de68de55f93f24b3ad623dd499390aaee45`
 - 场景与 Case：`unitree_g1_pack_camera/case1`
 
 | 项目 | 内容 |
 | --- | --- |
-| 机器来源 | 自备付费云服务器（AutoDL） |
+| 机器来源 | 自备服务器（AutoDL，付费） |
 | 操作系统 | Ubuntu 22.04.1 LTS |
-| CPU | Intel Xeon Gold 6348，分配 14 vCPU |
+| CPU | Intel Xeon Gold 6348（14 vCPU） |
 | 内存 | 120 GiB |
 | GPU | NVIDIA A800 80GB PCIe |
 | Python | 3.10.18 |
@@ -55,7 +55,7 @@ WMA_INFERENCE_MODE=1 \
 bash scripts/run_case1_experiment.sh inference_mode_a800_20260824_01
 ```
 
-优化参数由 `patches/wma_optimizations.patch` 增加。补丁可以在项目提交 `3e198de...` 上直接应用：
+优化参数由 `patches/wma_optimizations.patch` 增加。补丁可以在代码提交号 `3e198de...` 上直接应用：
 
 ```bash
 git apply patches/wma_optimizations.patch
@@ -76,7 +76,7 @@ Baseline 完整计时为 855.153 s。`tqdm` 记录的 11 轮主循环约为 771.
 
 ![WMA 时间和 PSNR 对比](figures/wma_results.png)
 
-FP16 和 BF16 都明显降低了完整运行时间。本次记录中 BF16 的总时间最短，PSNR 仍高于 25 dB，但它比 FP16 多损失约 4.35 dB。`torch.inference_mode()` 只快了 0.378 s，变化约 0.04%，不能认为有实际加速。项目内部本来已经在多个推理函数中使用 `torch.no_grad()`，因此进一步关闭自动求导记录没有改变主要计算量。
+FP16 和 BF16 都明显降低了完整运行时间。本次记录中 BF16 的总时间最短，但它比 FP16 多损失约 4.35 dB。`torch.inference_mode()` 只快了 0.378 s，变化约 0.04%，不能认为有实际加速。项目内部本来已经在多个推理函数中使用 `torch.no_grad()`，因此进一步关闭自动求导记录没有改变主要计算量。
 
 如果同时考虑输出质量，FP16 的速度与质量更均衡。
 
@@ -84,7 +84,7 @@ FP16 和 BF16 都明显降低了完整运行时间。本次记录中 BF16 的总
 
 四次实验的输入和权重哈希一致，程序都正常完成 11 轮并生成 H.264、512×320、8 FPS、176 帧、22 秒的视频。PSNR 使用同一个 `psnr_score_for_challenge.py` 计算，评价方式没有修改。
 
-Baseline 和 FP16 在 8 月 13 日运行，BF16 和 `inference_mode()` 在 8 月 24 日使用相同磁盘镜像重新创建的服务器上运行。GPU 型号、Python、PyTorch、CUDA、代码提交和输入哈希相同；GPU 驱动分别为 590.48.01 和 595.71.05。每组只完整运行一次，所以不根据 BF16 与 FP16 的小幅时间差判断两种精度本身的性能高低。
+Baseline 和 FP16 在 8 月 13 日运行，BF16 和 `inference_mode()` 在 8 月 24 日使用相同磁盘镜像重新创建的服务器上运行。GPU 型号、Python、PyTorch、PyTorch CUDA 版本、代码提交和输入哈希相同；GPU 驱动分别为 590.48.01 和 595.71.05。每组只完整运行一次，所以不根据 BF16 与 FP16 的小幅时间差判断两种精度本身的性能高低。
 
 ## 文件说明
 
