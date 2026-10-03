@@ -1,0 +1,12 @@
+{
+  "baseline_20_total_seconds": 7683.1799999999985,
+  "optimized_20_total_seconds": 6257.32,
+  "speedup": 1.2278707178152946,
+  "lowest_optimized_psnr_db": 24.947892617977853,
+  "case_count": 20,
+  "passes_revised_requirements": false,
+  "problems": [
+    "('unitree_z1_dual_arm_stackbox_v2', 'case1'): PSNR 24.947892617977853 dB < 25 dB",
+    "Total speedup 1.2279x < 1.25x"
+  ]
+}

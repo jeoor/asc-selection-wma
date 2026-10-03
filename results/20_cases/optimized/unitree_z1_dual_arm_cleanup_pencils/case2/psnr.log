@@ -1,0 +1,7 @@
+Comparing:
+Ref: /root/autodl-tmp/WMA20/unifolm-world-model-action/unitree_z1_dual_arm_cleanup_pencils/case2/unitree_z1_dual_arm_cleanup_pencils_case2.mp4
+Pred: /root/autodl-tmp/WMA20/persistent_rng_tf32_20_20261003_01/unitree_z1_dual_arm_cleanup_pencils/case2/output/inference/50_full_fs4.mp4
+------------------------------
+Video PSNR: 44.8277 dB
+------------------------------
+Result saved to /root/autodl-tmp/WMA20/persistent_rng_tf32_20_20261003_01/unitree_z1_dual_arm_cleanup_pencils/case2/psnr_result.json

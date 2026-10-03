@@ -1,0 +1,5 @@
+{
+    "gt_video": "/root/autodl-tmp/WMA20/unifolm-world-model-action/unitree_z1_dual_arm_stackbox_v2/case3/unitree_z1_dual_arm_stackbox_v2_case3.mp4",
+    "pred_video": "/root/autodl-tmp/WMA20/amp_baseline_20_20260926_04/unitree_z1_dual_arm_stackbox_v2/case3/output/inference/25_full_fs4.mp4",
+    "psnr": 29.624994197995917
+}

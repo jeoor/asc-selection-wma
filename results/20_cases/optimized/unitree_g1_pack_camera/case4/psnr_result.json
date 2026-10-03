@@ -1,0 +1,5 @@
+{
+    "gt_video": "/root/autodl-tmp/WMA20/unifolm-world-model-action/unitree_g1_pack_camera/case4/unitree_g1_pack_camera_case4.mp4",
+    "pred_video": "/root/autodl-tmp/WMA20/persistent_rng_tf32_20_20261003_01/unitree_g1_pack_camera/case4/output/inference/200_full_fs6.mp4",
+    "psnr": 27.070648149684086
+}

@@ -1,0 +1,12 @@
+2026-10-03T15:29:51+08:00 START optimized 20-case run
+2026-10-03T17:08:25+08:00 START scoring optimized outputs
+{
+  "baseline_20_total_seconds": 7683.1799999999985,
+  "optimized_20_total_seconds": 5913.84,
+  "speedup": 1.2991863154904424,
+  "lowest_optimized_psnr_db": 25.12008483689618,
+  "case_count": 20,
+  "passes_revised_requirements": true,
+  "problems": []
+}
+2026-10-03T17:08:44+08:00 COMPLETE optimized run and assessment

@@ -1,0 +1,287 @@
+diff --git a/scripts/evaluation/world_model_interaction.py b/scripts/evaluation/world_model_interaction.py
+index ccc9747..c5982d0 100644
+--- a/scripts/evaluation/world_model_interaction.py
++++ b/scripts/evaluation/world_model_interaction.py
+@@ -8,7 +8,9 @@ import numpy as np
+ import logging
+ import einops
+ import warnings
+-import imageio
++import imageio
++from contextlib import nullcontext
++from concurrent.futures import ThreadPoolExecutor
+ 
+ from pytorch_lightning import seed_everything
+ from omegaconf import OmegaConf
+@@ -123,7 +125,7 @@ def is_inferenced(save_dir: str, filename: str) -> bool:
+     return os.path.exists(video_file)
+ 
+ 
+-def save_results(video: Tensor, filename: str, fps: int = 8) -> None:
++def save_results(video: Tensor, filename: str, fps: int = 8) -> None:
+     """Save video tensor to file using torchvision.
+ 
+     Args:
+@@ -143,11 +145,21 @@ def save_results(video: Tensor, filename: str, fps: int = 8) -> None:
+     grid = torch.stack(frame_grids, dim=0)
+     grid = (grid + 1.0) / 2.0
+     grid = (grid * 255).to(torch.uint8).permute(0, 2, 3, 1)
+-    torchvision.io.write_video(filename,
+-                               grid,
+-                               fps=fps,
+-                               video_codec='h264',
+-                               options={'crf': '10'})
++    torchvision.io.write_video(filename,
++                               grid,
++                               fps=fps,
++                               video_codec='h264',
++                               options={'crf': '10'})
++
++
++def write_iteration_outputs(writer, action_video, world_video,
++                            action_tag, world_tag, action_file, world_file,
++                            fps):
++    """Write the same intermediate outputs while the next GPU step runs."""
++    log_to_tensorboard(writer, action_video, action_tag, fps=fps)
++    log_to_tensorboard(writer, world_video, world_tag, fps=fps)
++    save_results(action_video, action_file, fps=fps)
++    save_results(world_video, world_file, fps=fps)
+ 
+ 
+ def get_init_frame_path(data_dir: str, sample: dict) -> str:
+@@ -325,9 +337,10 @@ def image_guided_synthesis_sim_mode(
+         fs: int | None = None,
+         text_input: bool = True,
+         timestep_spacing: str = 'uniform',
+-        guidance_rescale: float = 0.0,
+-        sim_mode: bool = True,
+-        **kwargs) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
++        guidance_rescale: float = 0.0,
++        sim_mode: bool = True,
++        fp32_decoder: bool = False,
++        **kwargs) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
+     """
+     Performs image-guided video generation in a simulation-style mode with optional multimodal guidance (image, state, action, text).
+ 
+@@ -425,13 +438,17 @@ def image_guided_synthesis_sim_mode(
+             **kwargs)
+ 
+         # Reconstruct from latent to pixel space
+-        batch_images = model.decode_first_stage(samples)
++        if fp32_decoder:
++            with torch.autocast(device_type="cuda", enabled=False):
++                batch_images = model.decode_first_stage(samples.float())
++        else:
++            batch_images = model.decode_first_stage(samples)
+         batch_variants = batch_images
+ 
+     return batch_variants, actions, states
+ 
+ 
+-def run_inference(args: argparse.Namespace, gpu_num: int, gpu_no: int) -> None:
++def run_inference(args: argparse.Namespace, gpu_num: int, gpu_no: int, cached=None):
+     """
+     Run inference pipeline on prompts and image inputs.
+ 
+@@ -447,30 +464,45 @@ def run_inference(args: argparse.Namespace, gpu_num: int, gpu_no: int) -> None:
+     os.makedirs(args.savedir + '/inference', exist_ok=True)
+     log_dir = args.savedir + f"/tensorboard"
+     os.makedirs(log_dir, exist_ok=True)
+-    writer = SummaryWriter(log_dir=log_dir)
++    writer = SummaryWriter(log_dir=log_dir)
++    writer_executor = ThreadPoolExecutor(max_workers=1)
++    pending_writes = []
+ 
+     # Load prompt
+     csv_path = os.path.join(args.prompt_dir, f"{args.dataset}.csv")
+     df = pd.read_csv(csv_path)
+ 
+-    # Load config
+-    config = OmegaConf.load(args.config)
+-    config['model']['params']['wma_config']['params'][
+-        'use_checkpoint'] = False
+-    model = instantiate_from_config(config.model)
+-    model.perframe_ae = args.perframe_ae
+-    assert os.path.exists(args.ckpt_path), "Error: checkpoint Not Found!"
+-    model = load_model_checkpoint(model, args.ckpt_path)
+-    model.eval()
+-    print(f'>>> Load pre-trained model ...')
+-
+-    # Build unnomalizer
+-    logging.info("***** Configing Data *****")
+-    data = instantiate_from_config(config.data)
+-    data.setup()
+-    print(">>> Dataset is successfully loaded ...")
+-
+-    model = model.cuda(gpu_no)
++    if cached is None:
++        # Model weights and dataset normalizers are shared across cases.
++        config = OmegaConf.load(args.config)
++        config['model']['params']['wma_config']['params'][
++            'use_checkpoint'] = False
++        model = instantiate_from_config(config.model)
++        model.perframe_ae = args.perframe_ae
++        assert os.path.exists(args.ckpt_path), "Error: checkpoint Not Found!"
++        model = load_model_checkpoint(model, args.ckpt_path)
++        model.eval()
++        print(f'>>> Load pre-trained model ...')
++
++        logging.info("***** Configing Data *****")
++        data = instantiate_from_config(config.data)
++        data.setup()
++        print(">>> Dataset is successfully loaded ...")
++        model = model.cuda(gpu_no)
++        # A standalone case starts inference after model construction has consumed
++        # random numbers. Reuse that exact state for each subsequent cached case.
++        post_load_rng = (
++            random.getstate(),
++            np.random.get_state(),
++            torch.get_rng_state(),
++            torch.cuda.get_rng_state_all(),
++        )
++    else:
++        model, data, post_load_rng = cached
++        random.setstate(post_load_rng[0])
++        np.random.set_state(post_load_rng[1])
++        torch.set_rng_state(post_load_rng[2])
++        torch.cuda.set_rng_state_all(post_load_rng[3])
+     device = get_device_from_parameters(model)
+ 
+     # Run over data
+@@ -585,9 +617,10 @@ def run_inference(args: argparse.Namespace, gpu_num: int, gpu_no: int) -> None:
+                     unconditional_guidance_scale=args.
+                     unconditional_guidance_scale,
+                     fs=model_input_fs,
+-                    timestep_spacing=args.timestep_spacing,
+-                    guidance_rescale=args.guidance_rescale,
+-                    sim_mode=False)
++                    timestep_spacing=args.timestep_spacing,
++                    guidance_rescale=args.guidance_rescale,
++                    sim_mode=False,
++                    fp32_decoder=args.fp32_decoder)
+ 
+                 # Update future actions in the observation queues
+                 for idx in range(len(pred_actions[0])):
+@@ -626,9 +659,10 @@ def run_inference(args: argparse.Namespace, gpu_num: int, gpu_no: int) -> None:
+                     unconditional_guidance_scale=args.
+                     unconditional_guidance_scale,
+                     fs=model_input_fs,
+-                    text_input=False,
+-                    timestep_spacing=args.timestep_spacing,
+-                    guidance_rescale=args.guidance_rescale)
++                    text_input=False,
++                    timestep_spacing=args.timestep_spacing,
++                    guidance_rescale=args.guidance_rescale,
++                    fp32_decoder=args.fp32_decoder)
+ 
+                 for idx in range(args.exe_steps):
+                     observation = {
+@@ -646,40 +680,51 @@ def run_inference(args: argparse.Namespace, gpu_num: int, gpu_no: int) -> None:
+ 
+                 # Save the imagen videos for decision-making
+                 sample_tag = f"{args.dataset}-vid{sample['videoid']}-dm-fs-{fs}/itr-{itr}"
+-                log_to_tensorboard(writer,
+-                                   pred_videos_0,
+-                                   sample_tag,
+-                                   fps=args.save_fps)
++                action_tag = sample_tag
+                 # Save videos environment changes via world-model interaction
+                 sample_tag = f"{args.dataset}-vid{sample['videoid']}-wd-fs-{fs}/itr-{itr}"
+-                log_to_tensorboard(writer,
+-                                   pred_videos_1,
+-                                   sample_tag,
+-                                   fps=args.save_fps)
++                world_tag = sample_tag
+ 
+                 # Save the imagen videos for decision-making
+                 sample_video_file = f'{video_save_dir}/dm/{fs}/itr-{itr}.mp4'
+-                save_results(pred_videos_0.cpu(),
+-                             sample_video_file,
+-                             fps=args.save_fps)
++                action_file = sample_video_file
+                 # Save videos environment changes via world-model interaction
+                 sample_video_file = f'{video_save_dir}/wm/{fs}/itr-{itr}.mp4'
+-                save_results(pred_videos_1.cpu(),
+-                             sample_video_file,
+-                             fps=args.save_fps)
++                world_file = sample_video_file
++
++                action_cpu = pred_videos_0.detach().cpu()
++                world_cpu = pred_videos_1.detach().cpu()
++                pending_writes.append(writer_executor.submit(
++                    write_iteration_outputs,
++                    writer,
++                    action_cpu,
++                    world_cpu,
++                    action_tag,
++                    world_tag,
++                    action_file,
++                    world_file,
++                    args.save_fps,
++                ))
+ 
+                 print('>' * 24)
+                 # Collect the result of world-model interactions
+-                wm_video.append(pred_videos_1[:, :, :args.exe_steps].cpu())
+-
+-            full_video = torch.cat(wm_video, dim=2)
++                wm_video.append(world_cpu[:, :, :args.exe_steps])
++
++            full_video = torch.cat(wm_video, dim=2)
++            for pending_write in pending_writes:
++                pending_write.result()
++            pending_writes.clear()
+             sample_tag = f"{args.dataset}-vid{sample['videoid']}-wd-fs-{fs}/full"
+             log_to_tensorboard(writer,
+                                full_video,
+                                sample_tag,
+                                fps=args.save_fps)
+-            sample_full_video_file = f"{video_save_dir}/../{sample['videoid']}_full_fs{fs}.mp4"
+-            save_results(full_video, sample_full_video_file, fps=args.save_fps)
++            sample_full_video_file = f"{video_save_dir}/../{sample['videoid']}_full_fs{fs}.mp4"
++            save_results(full_video, sample_full_video_file, fps=args.save_fps)
++
++    writer_executor.shutdown(wait=True)
++    writer.close()
++    return model, data, post_load_rng
+ 
+ 
+ def get_parser():
+@@ -798,6 +843,16 @@ def get_parser():
+                         type=int,
+                         default=8,
+                         help="fps for the saving video")
++    parser.add_argument("--amp_dtype",
++                        choices=("none", "fp16", "bf16"),
++                        default="none",
++                        help="CUDA autocast dtype used for inference")
++    parser.add_argument("--inference_mode",
++                        action="store_true",
++                        help="disable autograd bookkeeping during inference")
++    parser.add_argument("--fp32_decoder",
++                        action="store_true",
++                        help="decode generated latents without autocast")
+     return parser
+ 
+ 
+@@ -809,4 +864,19 @@ if __name__ == '__main__':
+         seed = random.randint(0, 2**31)
+     seed_everything(seed)
+     rank, gpu_num = 0, 1
+-    run_inference(args, gpu_num, rank)
++    amp_context = nullcontext()
++    if args.amp_dtype != "none":
++        amp_dtype = {
++            "fp16": torch.float16,
++            "bf16": torch.bfloat16,
++        }[args.amp_dtype]
++        print(f">>> CUDA AMP enabled: {args.amp_dtype}")
++        amp_context = torch.autocast(device_type="cuda", dtype=amp_dtype)
++
++    inference_context = nullcontext()
++    if args.inference_mode:
++        print(">>> torch.inference_mode enabled")
++        inference_context = torch.inference_mode()
++
++    with inference_context, amp_context:
++        run_inference(args, gpu_num, rank)

@@ -1,0 +1,7 @@
+Comparing:
+Ref: /root/autodl-tmp/WMA20/unifolm-world-model-action/unitree_z1_stackbox/case3/unitree_z1_stackbox_case3.mp4
+Pred: /root/autodl-tmp/WMA20/persistent_async_mixed_20_20261002_01/unitree_z1_stackbox/case3/output/inference/25_full_fs4.mp4
+------------------------------
+Video PSNR: 39.6286 dB
+------------------------------
+Result saved to /root/autodl-tmp/WMA20/persistent_async_mixed_20_20261002_01/unitree_z1_stackbox/case3/psnr_result.json
