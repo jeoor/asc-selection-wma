@@ -1,0 +1,7 @@
+Comparing:
+Ref: /root/autodl-tmp/WMA20/unifolm-world-model-action/unitree_z1_stackbox/case4/unitree_z1_stackbox_case4.mp4
+Pred: /root/autodl-tmp/WMA20/ablation_eval_20261004/full_cached_sync/unitree_z1_stackbox/case4/output/inference/35_full_fs4.mp4
+------------------------------
+Video PSNR: 48.8606 dB
+------------------------------
+Result saved to /root/autodl-tmp/WMA20/ablation_eval_20261004/full_cached_sync/unitree_z1_stackbox/case4/psnr_result.json

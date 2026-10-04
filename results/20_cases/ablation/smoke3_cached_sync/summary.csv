@@ -1,0 +1,3 @@
+scenario,case,n_iter,frame_stride,real_seconds
+unitree_g1_pack_camera,case1,11,6,395.109500
+unitree_g1_pack_camera,case2,11,6,340.443147

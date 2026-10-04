@@ -1,0 +1,16 @@
+{
+  "cached_sync_case_seconds": 6352.113902,
+  "cached_async_case_seconds": 5919.693105000001,
+  "reload_segmented_case_seconds": 6911.405421,
+  "cached_sync_wall_seconds": 6355.28,
+  "cached_async_wall_seconds": 5924.33,
+  "async_vs_sync_wall_saved_seconds": 430.9499999999998,
+  "reload_vs_cached_async_case_saved_seconds": 991.7123159999992,
+  "reload_segments_are_not_one_continuous_end_to_end_run": true,
+  "all_twenty_sync_videos_match_scored_cached_async_videos": true,
+  "all_twenty_reload_videos_match_scored_cached_async_videos": true,
+  "minimum_psnr_db": 25.12008483689618,
+  "missing_tf32_environment_metadata": [
+    "cached_sync"
+  ]
+}

@@ -1,0 +1,719 @@
+START 1/10 unitree_z1_dual_arm_stackbox/case3
+Global seed set to 123
+INFO:mainlogger:LatentVisualDiffusion: Running in v-prediction mode
+INFO:unifolm_wma.models.diffusion_head.conditional_unet1d:number of parameters: 5.010531e+08
+INFO:unifolm_wma.models.diffusion_head.conditional_unet1d:number of parameters: 5.010531e+08
+AE working on z of shape (1, 4, 32, 32) = 4096 dimensions.
+INFO:root:Loaded ViT-H-14 model config.
+INFO:root:Loading pretrained ViT-H-14 weights (laion2b_s32b_b79k).
+INFO:root:Loaded ViT-H-14 model config.
+INFO:root:Loading pretrained ViT-H-14 weights (laion2b_s32b_b79k).
+>>> model checkpoint loaded.
+>>> Load pre-trained model ...
+INFO:root:***** Configing Data *****
+>>> unitree_z1_stackbox: 1 data samples loaded.
+>>> unitree_z1_stackbox: data stats loaded.
+>>> unitree_z1_stackbox: normalizer initiated.
+>>> unitree_z1_dual_arm_stackbox: 1 data samples loaded.
+>>> unitree_z1_dual_arm_stackbox: data stats loaded.
+>>> unitree_z1_dual_arm_stackbox: normalizer initiated.
+>>> unitree_z1_dual_arm_stackbox_v2: 1 data samples loaded.
+>>> unitree_z1_dual_arm_stackbox_v2: data stats loaded.
+>>> unitree_z1_dual_arm_stackbox_v2: normalizer initiated.
+>>> unitree_z1_dual_arm_cleanup_pencils: 1 data samples loaded.
+>>> unitree_z1_dual_arm_cleanup_pencils: data stats loaded.
+>>> unitree_z1_dual_arm_cleanup_pencils: normalizer initiated.
+>>> unitree_g1_pack_camera: 1 data samples loaded.
+>>> unitree_g1_pack_camera: data stats loaded.
+>>> unitree_g1_pack_camera: normalizer initiated.
+>>> Dataset is successfully loaded ...
+>>> Generate 16 frames under each generation ...
+DEBUG:h5py._conv:Creating converter from 3 to 5
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 62 4096
+  0%|          | 0/7 [00:00<?, ?it/s] 14%|█▍        | 1/7 [00:27<02:43, 27.31s/it]>>> Step 0: generating actions ...
+>>> Step 0: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 1: generating actions ...
+DEBUG:PIL.Image:Importing BlpImagePlugin
+DEBUG:PIL.Image:Importing BmpImagePlugin
+DEBUG:PIL.Image:Importing BufrStubImagePlugin
+DEBUG:PIL.Image:Importing CurImagePlugin
+DEBUG:PIL.Image:Importing DcxImagePlugin
+DEBUG:PIL.Image:Importing DdsImagePlugin
+DEBUG:PIL.Image:Importing EpsImagePlugin
+DEBUG:PIL.Image:Importing FitsImagePlugin
+DEBUG:PIL.Image:Importing FitsStubImagePlugin
+DEBUG:PIL.Image:Importing FliImagePlugin
+DEBUG:PIL.Image:Importing FpxImagePlugin
+DEBUG:PIL.Image:Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing FtexImagePlugin
+DEBUG:PIL.Image:Importing GbrImagePlugin
+DEBUG:PIL.Image:Importing GifImagePlugin
+DEBUG:PIL.Image:Importing GribStubImagePlugin
+DEBUG:PIL.Image:Importing Hdf5StubImagePlugin
+DEBUG:PIL.Image:Importing IcnsImagePlugin
+DEBUG:PIL.Image:Importing IcoImagePlugin
+DEBUG:PIL.Image:Importing ImImagePlugin
+DEBUG:PIL.Image:Importing ImtImagePlugin
+DEBUG:PIL.Image:Importing IptcImagePlugin
+DEBUG:PIL.Image:Importing JpegImagePlugin
+DEBUG:PIL.Image:Importing Jpeg2KImagePlugin
+DEBUG:PIL.Image:Importing McIdasImagePlugin
+DEBUG:PIL.Image:Importing MicImagePlugin
+DEBUG:PIL.Image:Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing MpegImagePlugin
+DEBUG:PIL.Image:Importing MpoImagePlugin
+DEBUG:PIL.Image:Importing MspImagePlugin
+DEBUG:PIL.Image:Importing PalmImagePlugin
+DEBUG:PIL.Image:Importing PcdImagePlugin
+DEBUG:PIL.Image:Importing PcxImagePlugin
+DEBUG:PIL.Image:Importing PdfImagePlugin
+DEBUG:PIL.Image:Importing PixarImagePlugin
+DEBUG:PIL.Image:Importing PngImagePlugin
+DEBUG:PIL.Image:Importing PpmImagePlugin
+DEBUG:PIL.Image:Importing PsdImagePlugin
+DEBUG:PIL.Image:Importing QoiImagePlugin
+DEBUG:PIL.Image:Importing SgiImagePlugin
+DEBUG:PIL.Image:Importing SpiderImagePlugin
+DEBUG:PIL.Image:Importing SunImagePlugin
+DEBUG:PIL.Image:Importing TgaImagePlugin
+DEBUG:PIL.Image:Importing TiffImagePlugin
+DEBUG:PIL.Image:Importing WebPImagePlugin
+DEBUG:PIL.Image:Importing WmfImagePlugin
+DEBUG:PIL.Image:Importing XbmImagePlugin
+DEBUG:PIL.Image:Importing XpmImagePlugin
+DEBUG:PIL.Image:Importing XVThumbImagePlugin
+ 29%|██▊       | 2/7 [00:54<02:17, 27.48s/it] 43%|████▎     | 3/7 [01:22<01:50, 27.62s/it] 57%|█████▋    | 4/7 [01:50<01:23, 27.68s/it] 71%|███████▏  | 5/7 [02:18<00:55, 27.72s/it] 86%|████████▌ | 6/7 [02:46<00:27, 27.74s/it]100%|██████████| 7/7 [03:13<00:00, 27.73s/it]100%|██████████| 7/7 [03:13<00:00, 27.68s/it]
+>>> Step 1: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 2: generating actions ...
+>>> Step 2: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 3: generating actions ...
+>>> Step 3: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 4: generating actions ...
+>>> Step 4: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 5: generating actions ...
+>>> Step 5: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 6: generating actions ...
+>>> Step 6: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+DONE 1/10 unitree_z1_dual_arm_stackbox/case3 272.657s
+START 2/10 unitree_z1_dual_arm_stackbox/case4
+Global seed set to 123
+INFO:mainlogger:LatentVisualDiffusion: Running in v-prediction mode
+INFO:unifolm_wma.models.diffusion_head.conditional_unet1d:number of parameters: 5.010531e+08
+INFO:unifolm_wma.models.diffusion_head.conditional_unet1d:number of parameters: 5.010531e+08
+AE working on z of shape (1, 4, 32, 32) = 4096 dimensions.
+INFO:root:Loaded ViT-H-14 model config.
+INFO:root:Loading pretrained ViT-H-14 weights (laion2b_s32b_b79k).
+INFO:root:Loaded ViT-H-14 model config.
+INFO:root:Loading pretrained ViT-H-14 weights (laion2b_s32b_b79k).
+>>> model checkpoint loaded.
+>>> Load pre-trained model ...
+INFO:root:***** Configing Data *****
+>>> unitree_z1_stackbox: 1 data samples loaded.
+>>> unitree_z1_stackbox: data stats loaded.
+>>> unitree_z1_stackbox: normalizer initiated.
+>>> unitree_z1_dual_arm_stackbox: 1 data samples loaded.
+>>> unitree_z1_dual_arm_stackbox: data stats loaded.
+>>> unitree_z1_dual_arm_stackbox: normalizer initiated.
+>>> unitree_z1_dual_arm_stackbox_v2: 1 data samples loaded.
+>>> unitree_z1_dual_arm_stackbox_v2: data stats loaded.
+>>> unitree_z1_dual_arm_stackbox_v2: normalizer initiated.
+>>> unitree_z1_dual_arm_cleanup_pencils: 1 data samples loaded.
+>>> unitree_z1_dual_arm_cleanup_pencils: data stats loaded.
+>>> unitree_z1_dual_arm_cleanup_pencils: normalizer initiated.
+>>> unitree_g1_pack_camera: 1 data samples loaded.
+>>> unitree_g1_pack_camera: data stats loaded.
+>>> unitree_g1_pack_camera: normalizer initiated.
+>>> Dataset is successfully loaded ...
+>>> Generate 16 frames under each generation ...
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 62 4096
+  0%|          | 0/7 [00:00<?, ?it/s] 14%|█▍        | 1/7 [00:27<02:42, 27.05s/it] 29%|██▊       | 2/7 [00:54<02:16, 27.40s/it] 43%|████▎     | 3/7 [01:22<01:50, 27.52s/it] 57%|█████▋    | 4/7 [01:49<01:22, 27.54s/it] 71%|███████▏  | 5/7 [02:17<00:55, 27.57s/it] 86%|████████▌ | 6/7 [02:45<00:27, 27.61s/it]100%|██████████| 7/7 [03:12<00:00, 27.62s/it]100%|██████████| 7/7 [03:12<00:00, 27.56s/it]
+>>> Step 0: generating actions ...
+>>> Step 0: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 1: generating actions ...
+>>> Step 1: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 2: generating actions ...
+>>> Step 2: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 3: generating actions ...
+>>> Step 3: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 4: generating actions ...
+>>> Step 4: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 5: generating actions ...
+>>> Step 5: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 6: generating actions ...
+>>> Step 6: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+DONE 2/10 unitree_z1_dual_arm_stackbox/case4 265.931s
+START 3/10 unitree_z1_dual_arm_stackbox_v2/case1
+Global seed set to 123
+INFO:mainlogger:LatentVisualDiffusion: Running in v-prediction mode
+INFO:unifolm_wma.models.diffusion_head.conditional_unet1d:number of parameters: 5.010531e+08
+INFO:unifolm_wma.models.diffusion_head.conditional_unet1d:number of parameters: 5.010531e+08
+AE working on z of shape (1, 4, 32, 32) = 4096 dimensions.
+INFO:root:Loaded ViT-H-14 model config.
+INFO:root:Loading pretrained ViT-H-14 weights (laion2b_s32b_b79k).
+INFO:root:Loaded ViT-H-14 model config.
+INFO:root:Loading pretrained ViT-H-14 weights (laion2b_s32b_b79k).
+>>> model checkpoint loaded.
+>>> Load pre-trained model ...
+INFO:root:***** Configing Data *****
+>>> unitree_z1_stackbox: 1 data samples loaded.
+>>> unitree_z1_stackbox: data stats loaded.
+>>> unitree_z1_stackbox: normalizer initiated.
+>>> unitree_z1_dual_arm_stackbox: 1 data samples loaded.
+>>> unitree_z1_dual_arm_stackbox: data stats loaded.
+>>> unitree_z1_dual_arm_stackbox: normalizer initiated.
+>>> unitree_z1_dual_arm_stackbox_v2: 1 data samples loaded.
+>>> unitree_z1_dual_arm_stackbox_v2: data stats loaded.
+>>> unitree_z1_dual_arm_stackbox_v2: normalizer initiated.
+>>> unitree_z1_dual_arm_cleanup_pencils: 1 data samples loaded.
+>>> unitree_z1_dual_arm_cleanup_pencils: data stats loaded.
+>>> unitree_z1_dual_arm_cleanup_pencils: normalizer initiated.
+>>> unitree_g1_pack_camera: 1 data samples loaded.
+>>> unitree_g1_pack_camera: data stats loaded.
+>>> unitree_g1_pack_camera: normalizer initiated.
+>>> Dataset is successfully loaded ...
+>>> Generate 16 frames under each generation ...
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 62 4096
+  0%|          | 0/11 [00:00<?, ?it/s]  9%|▉         | 1/11 [00:36<06:08, 36.85s/it] 18%|█▊        | 2/11 [01:14<05:34, 37.20s/it] 27%|██▋       | 3/11 [01:51<04:58, 37.37s/it] 36%|███▋      | 4/11 [02:29<04:22, 37.45s/it] 45%|████▌     | 5/11 [03:07<03:45, 37.59s/it] 55%|█████▍    | 6/11 [03:45<03:08, 37.66s/it] 64%|██████▎   | 7/11 [04:22<02:30, 37.69s/it] 73%|███████▎  | 8/11 [05:01<01:53, 37.88s/it] 82%|████████▏ | 9/11 [05:39<01:15, 37.91s/it] 91%|█████████ | 10/11 [06:17<00:37, 37.95s/it]100%|██████████| 11/11 [06:55<00:00, 38.02s/it]100%|██████████| 11/11 [06:55<00:00, 37.75s/it]
+>>> Step 0: generating actions ...
+>>> Step 0: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 1: generating actions ...
+>>> Step 1: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 2: generating actions ...
+>>> Step 2: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 3: generating actions ...
+>>> Step 3: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 4: generating actions ...
+>>> Step 4: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 5: generating actions ...
+>>> Step 5: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 6: generating actions ...
+>>> Step 6: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 7: generating actions ...
+>>> Step 7: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 8: generating actions ...
+>>> Step 8: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 9: generating actions ...
+>>> Step 9: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 10: generating actions ...
+>>> Step 10: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+DONE 3/10 unitree_z1_dual_arm_stackbox_v2/case1 488.382s
+START 4/10 unitree_z1_dual_arm_stackbox_v2/case2
+Global seed set to 123
+INFO:mainlogger:LatentVisualDiffusion: Running in v-prediction mode
+INFO:unifolm_wma.models.diffusion_head.conditional_unet1d:number of parameters: 5.010531e+08
+INFO:unifolm_wma.models.diffusion_head.conditional_unet1d:number of parameters: 5.010531e+08
+AE working on z of shape (1, 4, 32, 32) = 4096 dimensions.
+INFO:root:Loaded ViT-H-14 model config.
+INFO:root:Loading pretrained ViT-H-14 weights (laion2b_s32b_b79k).
+INFO:root:Loaded ViT-H-14 model config.
+INFO:root:Loading pretrained ViT-H-14 weights (laion2b_s32b_b79k).
+>>> model checkpoint loaded.
+>>> Load pre-trained model ...
+INFO:root:***** Configing Data *****
+>>> unitree_z1_stackbox: 1 data samples loaded.
+>>> unitree_z1_stackbox: data stats loaded.
+>>> unitree_z1_stackbox: normalizer initiated.
+>>> unitree_z1_dual_arm_stackbox: 1 data samples loaded.
+>>> unitree_z1_dual_arm_stackbox: data stats loaded.
+>>> unitree_z1_dual_arm_stackbox: normalizer initiated.
+>>> unitree_z1_dual_arm_stackbox_v2: 1 data samples loaded.
+>>> unitree_z1_dual_arm_stackbox_v2: data stats loaded.
+>>> unitree_z1_dual_arm_stackbox_v2: normalizer initiated.
+>>> unitree_z1_dual_arm_cleanup_pencils: 1 data samples loaded.
+>>> unitree_z1_dual_arm_cleanup_pencils: data stats loaded.
+>>> unitree_z1_dual_arm_cleanup_pencils: normalizer initiated.
+>>> unitree_g1_pack_camera: 1 data samples loaded.
+>>> unitree_g1_pack_camera: data stats loaded.
+>>> unitree_g1_pack_camera: normalizer initiated.
+>>> Dataset is successfully loaded ...
+>>> Generate 16 frames under each generation ...
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 62 4096
+  0%|          | 0/11 [00:00<?, ?it/s]  9%|▉         | 1/11 [00:27<04:31, 27.15s/it] 18%|█▊        | 2/11 [00:54<04:07, 27.55s/it] 27%|██▋       | 3/11 [01:22<03:41, 27.70s/it] 36%|███▋      | 4/11 [01:51<03:15, 27.91s/it] 45%|████▌     | 5/11 [02:19<02:47, 27.91s/it] 55%|█████▍    | 6/11 [02:46<02:19, 27.84s/it] 64%|██████▎   | 7/11 [03:14<01:51, 27.84s/it] 73%|███████▎  | 8/11 [03:42<01:23, 27.86s/it] 82%|████████▏ | 9/11 [04:10<00:55, 27.89s/it] 91%|█████████ | 10/11 [04:38<00:27, 27.91s/it]100%|██████████| 11/11 [05:06<00:00, 27.92s/it]100%|██████████| 11/11 [05:06<00:00, 27.85s/it]
+>>> Step 0: generating actions ...
+>>> Step 0: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 1: generating actions ...
+>>> Step 1: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 2: generating actions ...
+>>> Step 2: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 3: generating actions ...
+>>> Step 3: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 4: generating actions ...
+>>> Step 4: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 5: generating actions ...
+>>> Step 5: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 6: generating actions ...
+>>> Step 6: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 7: generating actions ...
+>>> Step 7: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 8: generating actions ...
+>>> Step 8: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 9: generating actions ...
+>>> Step 9: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 10: generating actions ...
+>>> Step 10: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+DONE 4/10 unitree_z1_dual_arm_stackbox_v2/case2 379.278s
+START 5/10 unitree_z1_dual_arm_stackbox_v2/case3
+Global seed set to 123
+INFO:mainlogger:LatentVisualDiffusion: Running in v-prediction mode
+INFO:unifolm_wma.models.diffusion_head.conditional_unet1d:number of parameters: 5.010531e+08
+INFO:unifolm_wma.models.diffusion_head.conditional_unet1d:number of parameters: 5.010531e+08
+AE working on z of shape (1, 4, 32, 32) = 4096 dimensions.
+INFO:root:Loaded ViT-H-14 model config.
+INFO:root:Loading pretrained ViT-H-14 weights (laion2b_s32b_b79k).
+INFO:root:Loaded ViT-H-14 model config.
+INFO:root:Loading pretrained ViT-H-14 weights (laion2b_s32b_b79k).
+>>> model checkpoint loaded.
+>>> Load pre-trained model ...
+INFO:root:***** Configing Data *****
+>>> unitree_z1_stackbox: 1 data samples loaded.
+>>> unitree_z1_stackbox: data stats loaded.
+>>> unitree_z1_stackbox: normalizer initiated.
+>>> unitree_z1_dual_arm_stackbox: 1 data samples loaded.
+>>> unitree_z1_dual_arm_stackbox: data stats loaded.
+>>> unitree_z1_dual_arm_stackbox: normalizer initiated.
+>>> unitree_z1_dual_arm_stackbox_v2: 1 data samples loaded.
+>>> unitree_z1_dual_arm_stackbox_v2: data stats loaded.
+>>> unitree_z1_dual_arm_stackbox_v2: normalizer initiated.
+>>> unitree_z1_dual_arm_cleanup_pencils: 1 data samples loaded.
+>>> unitree_z1_dual_arm_cleanup_pencils: data stats loaded.
+>>> unitree_z1_dual_arm_cleanup_pencils: normalizer initiated.
+>>> unitree_g1_pack_camera: 1 data samples loaded.
+>>> unitree_g1_pack_camera: data stats loaded.
+>>> unitree_g1_pack_camera: normalizer initiated.
+>>> Dataset is successfully loaded ...
+>>> Generate 16 frames under each generation ...
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 62 4096
+  0%|          | 0/11 [00:00<?, ?it/s]  9%|▉         | 1/11 [00:27<04:31, 27.11s/it] 18%|█▊        | 2/11 [00:54<04:07, 27.50s/it] 27%|██▋       | 3/11 [01:22<03:41, 27.69s/it] 36%|███▋      | 4/11 [01:50<03:14, 27.75s/it] 45%|████▌     | 5/11 [02:18<02:46, 27.83s/it] 55%|█████▍    | 6/11 [02:46<02:19, 27.82s/it] 64%|██████▎   | 7/11 [03:14<01:51, 27.83s/it] 73%|███████▎  | 8/11 [03:42<01:23, 27.91s/it] 82%|████████▏ | 9/11 [04:10<00:55, 27.91s/it] 91%|█████████ | 10/11 [04:38<00:27, 27.94s/it]100%|██████████| 11/11 [05:06<00:00, 28.00s/it]100%|██████████| 11/11 [05:06<00:00, 27.85s/it]
+>>> Step 0: generating actions ...
+>>> Step 0: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 1: generating actions ...
+>>> Step 1: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 2: generating actions ...
+>>> Step 2: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 3: generating actions ...
+>>> Step 3: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 4: generating actions ...
+>>> Step 4: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 5: generating actions ...
+>>> Step 5: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 6: generating actions ...
+>>> Step 6: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 7: generating actions ...
+>>> Step 7: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 8: generating actions ...
+>>> Step 8: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 9: generating actions ...
+>>> Step 9: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 10: generating actions ...
+>>> Step 10: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+DONE 5/10 unitree_z1_dual_arm_stackbox_v2/case3 377.847s
+START 6/10 unitree_z1_dual_arm_stackbox_v2/case4
+Global seed set to 123
+INFO:mainlogger:LatentVisualDiffusion: Running in v-prediction mode
+INFO:unifolm_wma.models.diffusion_head.conditional_unet1d:number of parameters: 5.010531e+08
+INFO:unifolm_wma.models.diffusion_head.conditional_unet1d:number of parameters: 5.010531e+08
+AE working on z of shape (1, 4, 32, 32) = 4096 dimensions.
+INFO:root:Loaded ViT-H-14 model config.
+INFO:root:Loading pretrained ViT-H-14 weights (laion2b_s32b_b79k).
+INFO:root:Loaded ViT-H-14 model config.
+INFO:root:Loading pretrained ViT-H-14 weights (laion2b_s32b_b79k).
+>>> model checkpoint loaded.
+>>> Load pre-trained model ...
+INFO:root:***** Configing Data *****
+>>> unitree_z1_stackbox: 1 data samples loaded.
+>>> unitree_z1_stackbox: data stats loaded.
+>>> unitree_z1_stackbox: normalizer initiated.
+>>> unitree_z1_dual_arm_stackbox: 1 data samples loaded.
+>>> unitree_z1_dual_arm_stackbox: data stats loaded.
+>>> unitree_z1_dual_arm_stackbox: normalizer initiated.
+>>> unitree_z1_dual_arm_stackbox_v2: 1 data samples loaded.
+>>> unitree_z1_dual_arm_stackbox_v2: data stats loaded.
+>>> unitree_z1_dual_arm_stackbox_v2: normalizer initiated.
+>>> unitree_z1_dual_arm_cleanup_pencils: 1 data samples loaded.
+>>> unitree_z1_dual_arm_cleanup_pencils: data stats loaded.
+>>> unitree_z1_dual_arm_cleanup_pencils: normalizer initiated.
+>>> unitree_g1_pack_camera: 1 data samples loaded.
+>>> unitree_g1_pack_camera: data stats loaded.
+>>> unitree_g1_pack_camera: normalizer initiated.
+>>> Dataset is successfully loaded ...
+>>> Generate 16 frames under each generation ...
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 62 4096
+  0%|          | 0/11 [00:00<?, ?it/s]  9%|▉         | 1/11 [00:26<04:28, 26.86s/it] 18%|█▊        | 2/11 [00:54<04:05, 27.26s/it] 27%|██▋       | 3/11 [01:21<03:39, 27.38s/it] 36%|███▋      | 4/11 [01:49<03:12, 27.46s/it] 45%|████▌     | 5/11 [02:17<02:45, 27.50s/it] 55%|█████▍    | 6/11 [02:44<02:17, 27.54s/it] 64%|██████▎   | 7/11 [03:12<01:50, 27.55s/it] 73%|███████▎  | 8/11 [03:39<01:22, 27.55s/it] 82%|████████▏ | 9/11 [04:07<00:55, 27.56s/it] 91%|█████████ | 10/11 [04:35<00:27, 27.61s/it]100%|██████████| 11/11 [05:02<00:00, 27.62s/it]100%|██████████| 11/11 [05:02<00:00, 27.52s/it]
+>>> Step 0: generating actions ...
+>>> Step 0: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 1: generating actions ...
+>>> Step 1: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 2: generating actions ...
+>>> Step 2: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 3: generating actions ...
+>>> Step 3: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 4: generating actions ...
+>>> Step 4: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 5: generating actions ...
+>>> Step 5: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 6: generating actions ...
+>>> Step 6: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 7: generating actions ...
+>>> Step 7: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 8: generating actions ...
+>>> Step 8: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 9: generating actions ...
+>>> Step 9: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 10: generating actions ...
+>>> Step 10: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+DONE 6/10 unitree_z1_dual_arm_stackbox_v2/case4 373.940s
+START 7/10 unitree_z1_stackbox/case1
+Global seed set to 123
+INFO:mainlogger:LatentVisualDiffusion: Running in v-prediction mode
+INFO:unifolm_wma.models.diffusion_head.conditional_unet1d:number of parameters: 5.010531e+08
+INFO:unifolm_wma.models.diffusion_head.conditional_unet1d:number of parameters: 5.010531e+08
+AE working on z of shape (1, 4, 32, 32) = 4096 dimensions.
+INFO:root:Loaded ViT-H-14 model config.
+INFO:root:Loading pretrained ViT-H-14 weights (laion2b_s32b_b79k).
+INFO:root:Loaded ViT-H-14 model config.
+INFO:root:Loading pretrained ViT-H-14 weights (laion2b_s32b_b79k).
+>>> model checkpoint loaded.
+>>> Load pre-trained model ...
+INFO:root:***** Configing Data *****
+>>> unitree_z1_stackbox: 1 data samples loaded.
+>>> unitree_z1_stackbox: data stats loaded.
+>>> unitree_z1_stackbox: normalizer initiated.
+>>> unitree_z1_dual_arm_stackbox: 1 data samples loaded.
+>>> unitree_z1_dual_arm_stackbox: data stats loaded.
+>>> unitree_z1_dual_arm_stackbox: normalizer initiated.
+>>> unitree_z1_dual_arm_stackbox_v2: 1 data samples loaded.
+>>> unitree_z1_dual_arm_stackbox_v2: data stats loaded.
+>>> unitree_z1_dual_arm_stackbox_v2: normalizer initiated.
+>>> unitree_z1_dual_arm_cleanup_pencils: 1 data samples loaded.
+>>> unitree_z1_dual_arm_cleanup_pencils: data stats loaded.
+>>> unitree_z1_dual_arm_cleanup_pencils: normalizer initiated.
+>>> unitree_g1_pack_camera: 1 data samples loaded.
+>>> unitree_g1_pack_camera: data stats loaded.
+>>> unitree_g1_pack_camera: normalizer initiated.
+>>> Dataset is successfully loaded ...
+>>> Generate 16 frames under each generation ...
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 62 4096
+  0%|          | 0/12 [00:00<?, ?it/s]  8%|▊         | 1/12 [00:26<04:54, 26.75s/it] 17%|█▋        | 2/12 [00:54<04:31, 27.11s/it] 25%|██▌       | 3/12 [01:22<04:09, 27.71s/it] 33%|███▎      | 4/12 [01:50<03:41, 27.74s/it] 42%|████▏     | 5/12 [02:18<03:14, 27.72s/it] 50%|█████     | 6/12 [02:45<02:46, 27.77s/it] 58%|█████▊    | 7/12 [03:13<02:18, 27.75s/it] 67%|██████▋   | 8/12 [03:41<01:50, 27.73s/it] 75%|███████▌  | 9/12 [04:09<01:23, 27.75s/it] 83%|████████▎ | 10/12 [04:36<00:55, 27.81s/it] 92%|█████████▏| 11/12 [05:04<00:27, 27.83s/it]100%|██████████| 12/12 [05:32<00:00, 27.81s/it]100%|██████████| 12/12 [05:32<00:00, 27.72s/it]
+>>> Step 0: generating actions ...
+>>> Step 0: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 1: generating actions ...
+>>> Step 1: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 2: generating actions ...
+>>> Step 2: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 3: generating actions ...
+>>> Step 3: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 4: generating actions ...
+>>> Step 4: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 5: generating actions ...
+>>> Step 5: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 6: generating actions ...
+>>> Step 6: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 7: generating actions ...
+>>> Step 7: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 8: generating actions ...
+>>> Step 8: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 9: generating actions ...
+>>> Step 9: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 10: generating actions ...
+>>> Step 10: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 11: generating actions ...
+>>> Step 11: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+DONE 7/10 unitree_z1_stackbox/case1 397.209s
+START 8/10 unitree_z1_stackbox/case2
+Global seed set to 123
+INFO:mainlogger:LatentVisualDiffusion: Running in v-prediction mode
+INFO:unifolm_wma.models.diffusion_head.conditional_unet1d:number of parameters: 5.010531e+08
+INFO:unifolm_wma.models.diffusion_head.conditional_unet1d:number of parameters: 5.010531e+08
+AE working on z of shape (1, 4, 32, 32) = 4096 dimensions.
+INFO:root:Loaded ViT-H-14 model config.
+INFO:root:Loading pretrained ViT-H-14 weights (laion2b_s32b_b79k).
+INFO:root:Loaded ViT-H-14 model config.
+INFO:root:Loading pretrained ViT-H-14 weights (laion2b_s32b_b79k).
+>>> model checkpoint loaded.
+>>> Load pre-trained model ...
+INFO:root:***** Configing Data *****
+>>> unitree_z1_stackbox: 1 data samples loaded.
+>>> unitree_z1_stackbox: data stats loaded.
+>>> unitree_z1_stackbox: normalizer initiated.
+>>> unitree_z1_dual_arm_stackbox: 1 data samples loaded.
+>>> unitree_z1_dual_arm_stackbox: data stats loaded.
+>>> unitree_z1_dual_arm_stackbox: normalizer initiated.
+>>> unitree_z1_dual_arm_stackbox_v2: 1 data samples loaded.
+>>> unitree_z1_dual_arm_stackbox_v2: data stats loaded.
+>>> unitree_z1_dual_arm_stackbox_v2: normalizer initiated.
+>>> unitree_z1_dual_arm_cleanup_pencils: 1 data samples loaded.
+>>> unitree_z1_dual_arm_cleanup_pencils: data stats loaded.
+>>> unitree_z1_dual_arm_cleanup_pencils: normalizer initiated.
+>>> unitree_g1_pack_camera: 1 data samples loaded.
+>>> unitree_g1_pack_camera: data stats loaded.
+>>> unitree_g1_pack_camera: normalizer initiated.
+>>> Dataset is successfully loaded ...
+>>> Generate 16 frames under each generation ...
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 62 4096
+  0%|          | 0/12 [00:00<?, ?it/s]  8%|▊         | 1/12 [00:27<04:57, 27.04s/it] 17%|█▋        | 2/12 [00:54<04:34, 27.42s/it] 25%|██▌       | 3/12 [01:22<04:08, 27.66s/it] 33%|███▎      | 4/12 [01:50<03:41, 27.74s/it] 42%|████▏     | 5/12 [02:18<03:14, 27.77s/it] 50%|█████     | 6/12 [02:46<02:46, 27.81s/it] 58%|█████▊    | 7/12 [03:14<02:19, 27.89s/it] 67%|██████▋   | 8/12 [03:42<01:51, 27.89s/it] 75%|███████▌  | 9/12 [04:09<01:23, 27.87s/it] 83%|████████▎ | 10/12 [04:38<00:55, 27.92s/it] 92%|█████████▏| 11/12 [05:05<00:27, 27.91s/it]100%|██████████| 12/12 [05:33<00:00, 27.89s/it]100%|██████████| 12/12 [05:33<00:00, 27.81s/it]
+>>> Step 0: generating actions ...
+>>> Step 0: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 1: generating actions ...
+>>> Step 1: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 2: generating actions ...
+>>> Step 2: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 3: generating actions ...
+>>> Step 3: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 4: generating actions ...
+>>> Step 4: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 5: generating actions ...
+>>> Step 5: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 6: generating actions ...
+>>> Step 6: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 7: generating actions ...
+>>> Step 7: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 8: generating actions ...
+>>> Step 8: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 9: generating actions ...
+>>> Step 9: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 10: generating actions ...
+>>> Step 10: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 11: generating actions ...
+>>> Step 11: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+DONE 8/10 unitree_z1_stackbox/case2 400.717s
+START 9/10 unitree_z1_stackbox/case3
+Global seed set to 123
+INFO:mainlogger:LatentVisualDiffusion: Running in v-prediction mode
+INFO:unifolm_wma.models.diffusion_head.conditional_unet1d:number of parameters: 5.010531e+08
+INFO:unifolm_wma.models.diffusion_head.conditional_unet1d:number of parameters: 5.010531e+08
+AE working on z of shape (1, 4, 32, 32) = 4096 dimensions.
+INFO:root:Loaded ViT-H-14 model config.
+INFO:root:Loading pretrained ViT-H-14 weights (laion2b_s32b_b79k).
+INFO:root:Loaded ViT-H-14 model config.
+INFO:root:Loading pretrained ViT-H-14 weights (laion2b_s32b_b79k).
+>>> model checkpoint loaded.
+>>> Load pre-trained model ...
+INFO:root:***** Configing Data *****
+>>> unitree_z1_stackbox: 1 data samples loaded.
+>>> unitree_z1_stackbox: data stats loaded.
+>>> unitree_z1_stackbox: normalizer initiated.
+>>> unitree_z1_dual_arm_stackbox: 1 data samples loaded.
+>>> unitree_z1_dual_arm_stackbox: data stats loaded.
+>>> unitree_z1_dual_arm_stackbox: normalizer initiated.
+>>> unitree_z1_dual_arm_stackbox_v2: 1 data samples loaded.
+>>> unitree_z1_dual_arm_stackbox_v2: data stats loaded.
+>>> unitree_z1_dual_arm_stackbox_v2: normalizer initiated.
+>>> unitree_z1_dual_arm_cleanup_pencils: 1 data samples loaded.
+>>> unitree_z1_dual_arm_cleanup_pencils: data stats loaded.
+>>> unitree_z1_dual_arm_cleanup_pencils: normalizer initiated.
+>>> unitree_g1_pack_camera: 1 data samples loaded.
+>>> unitree_g1_pack_camera: data stats loaded.
+>>> unitree_g1_pack_camera: normalizer initiated.
+>>> Dataset is successfully loaded ...
+>>> Generate 16 frames under each generation ...
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 62 4096
+  0%|          | 0/12 [00:00<?, ?it/s]  8%|▊         | 1/12 [00:27<04:59, 27.20s/it] 17%|█▋        | 2/12 [00:54<04:35, 27.51s/it] 25%|██▌       | 3/12 [01:22<04:09, 27.67s/it] 33%|███▎      | 4/12 [01:50<03:42, 27.76s/it] 42%|████▏     | 5/12 [02:18<03:14, 27.82s/it] 50%|█████     | 6/12 [02:46<02:47, 27.89s/it] 58%|█████▊    | 7/12 [03:14<02:19, 27.94s/it] 67%|██████▋   | 8/12 [03:42<01:51, 27.84s/it] 75%|███████▌  | 9/12 [04:09<01:23, 27.71s/it] 83%|████████▎ | 10/12 [04:37<00:55, 27.62s/it] 92%|█████████▏| 11/12 [05:04<00:27, 27.61s/it]100%|██████████| 12/12 [05:32<00:00, 27.66s/it]100%|██████████| 12/12 [05:32<00:00, 27.71s/it]
+>>> Step 0: generating actions ...
+>>> Step 0: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 1: generating actions ...
+>>> Step 1: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 2: generating actions ...
+>>> Step 2: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 3: generating actions ...
+>>> Step 3: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 4: generating actions ...
+>>> Step 4: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 5: generating actions ...
+>>> Step 5: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 6: generating actions ...
+>>> Step 6: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 7: generating actions ...
+>>> Step 7: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 8: generating actions ...
+>>> Step 8: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 9: generating actions ...
+>>> Step 9: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 10: generating actions ...
+>>> Step 10: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 11: generating actions ...
+>>> Step 11: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+DONE 9/10 unitree_z1_stackbox/case3 397.769s
+START 10/10 unitree_z1_stackbox/case4
+Global seed set to 123
+INFO:mainlogger:LatentVisualDiffusion: Running in v-prediction mode
+INFO:unifolm_wma.models.diffusion_head.conditional_unet1d:number of parameters: 5.010531e+08
+INFO:unifolm_wma.models.diffusion_head.conditional_unet1d:number of parameters: 5.010531e+08
+AE working on z of shape (1, 4, 32, 32) = 4096 dimensions.
+INFO:root:Loaded ViT-H-14 model config.
+INFO:root:Loading pretrained ViT-H-14 weights (laion2b_s32b_b79k).
+INFO:root:Loaded ViT-H-14 model config.
+INFO:root:Loading pretrained ViT-H-14 weights (laion2b_s32b_b79k).
+>>> model checkpoint loaded.
+>>> Load pre-trained model ...
+INFO:root:***** Configing Data *****
+>>> unitree_z1_stackbox: 1 data samples loaded.
+>>> unitree_z1_stackbox: data stats loaded.
+>>> unitree_z1_stackbox: normalizer initiated.
+>>> unitree_z1_dual_arm_stackbox: 1 data samples loaded.
+>>> unitree_z1_dual_arm_stackbox: data stats loaded.
+>>> unitree_z1_dual_arm_stackbox: normalizer initiated.
+>>> unitree_z1_dual_arm_stackbox_v2: 1 data samples loaded.
+>>> unitree_z1_dual_arm_stackbox_v2: data stats loaded.
+>>> unitree_z1_dual_arm_stackbox_v2: normalizer initiated.
+>>> unitree_z1_dual_arm_cleanup_pencils: 1 data samples loaded.
+>>> unitree_z1_dual_arm_cleanup_pencils: data stats loaded.
+>>> unitree_z1_dual_arm_cleanup_pencils: normalizer initiated.
+>>> unitree_g1_pack_camera: 1 data samples loaded.
+>>> unitree_g1_pack_camera: data stats loaded.
+>>> unitree_g1_pack_camera: normalizer initiated.
+>>> Dataset is successfully loaded ...
+>>> Generate 16 frames under each generation ...
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 62 4096
+  0%|          | 0/12 [00:00<?, ?it/s]  8%|▊         | 1/12 [00:26<04:55, 26.88s/it] 17%|█▋        | 2/12 [00:54<04:33, 27.32s/it] 25%|██▌       | 3/12 [01:21<04:06, 27.36s/it] 33%|███▎      | 4/12 [01:49<03:39, 27.39s/it] 42%|████▏     | 5/12 [02:16<03:12, 27.45s/it] 50%|█████     | 6/12 [02:44<02:44, 27.45s/it] 58%|█████▊    | 7/12 [03:11<02:17, 27.49s/it] 67%|██████▋   | 8/12 [03:39<01:49, 27.50s/it] 75%|███████▌  | 9/12 [04:06<01:22, 27.51s/it] 83%|████████▎ | 10/12 [04:34<00:55, 27.53s/it] 92%|█████████▏| 11/12 [05:02<00:27, 27.74s/it]100%|██████████| 12/12 [05:30<00:00, 27.76s/it]100%|██████████| 12/12 [05:30<00:00, 27.55s/it]
+>>> Step 0: generating actions ...
+>>> Step 0: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 1: generating actions ...
+>>> Step 1: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 2: generating actions ...
+>>> Step 2: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 3: generating actions ...
+>>> Step 3: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 4: generating actions ...
+>>> Step 4: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 5: generating actions ...
+>>> Step 5: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 6: generating actions ...
+>>> Step 6: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 7: generating actions ...
+>>> Step 7: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 8: generating actions ...
+>>> Step 8: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 9: generating actions ...
+>>> Step 9: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 10: generating actions ...
+>>> Step 10: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 11: generating actions ...
+>>> Step 11: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+DONE 10/10 unitree_z1_stackbox/case4 395.759s
+COMPLETE 10/10

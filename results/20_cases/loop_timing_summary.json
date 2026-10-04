@@ -1,0 +1,12 @@
+{
+  "method": "Sum each case's rounded final tqdm elapsed display; non-loop = wall time - loop sum",
+  "baseline_wall_seconds": 7683.18,
+  "baseline_loop_approx_seconds": 6097,
+  "baseline_non_loop_approx_seconds": 1586.18,
+  "optimized_wall_seconds": 5913.84,
+  "optimized_loop_approx_seconds": 5478,
+  "optimized_non_loop_approx_seconds": 435.84,
+  "loop_reduction_approx_seconds": 619,
+  "non_loop_reduction_approx_seconds": 1150.34,
+  "case_count": 20
+}

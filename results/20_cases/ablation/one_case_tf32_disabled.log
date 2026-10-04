@@ -1,0 +1,119 @@
+START 1/1 unitree_z1_dual_arm_stackbox_v2/case1
+Global seed set to 123
+INFO:mainlogger:LatentVisualDiffusion: Running in v-prediction mode
+INFO:unifolm_wma.models.diffusion_head.conditional_unet1d:number of parameters: 5.010531e+08
+INFO:unifolm_wma.models.diffusion_head.conditional_unet1d:number of parameters: 5.010531e+08
+AE working on z of shape (1, 4, 32, 32) = 4096 dimensions.
+INFO:root:Loaded ViT-H-14 model config.
+INFO:root:Loading pretrained ViT-H-14 weights (laion2b_s32b_b79k).
+INFO:root:Loaded ViT-H-14 model config.
+INFO:root:Loading pretrained ViT-H-14 weights (laion2b_s32b_b79k).
+>>> model checkpoint loaded.
+>>> Load pre-trained model ...
+INFO:root:***** Configing Data *****
+>>> unitree_z1_stackbox: 1 data samples loaded.
+>>> unitree_z1_stackbox: data stats loaded.
+>>> unitree_z1_stackbox: normalizer initiated.
+>>> unitree_z1_dual_arm_stackbox: 1 data samples loaded.
+>>> unitree_z1_dual_arm_stackbox: data stats loaded.
+>>> unitree_z1_dual_arm_stackbox: normalizer initiated.
+>>> unitree_z1_dual_arm_stackbox_v2: 1 data samples loaded.
+>>> unitree_z1_dual_arm_stackbox_v2: data stats loaded.
+>>> unitree_z1_dual_arm_stackbox_v2: normalizer initiated.
+>>> unitree_z1_dual_arm_cleanup_pencils: 1 data samples loaded.
+>>> unitree_z1_dual_arm_cleanup_pencils: data stats loaded.
+>>> unitree_z1_dual_arm_cleanup_pencils: normalizer initiated.
+>>> unitree_g1_pack_camera: 1 data samples loaded.
+>>> unitree_g1_pack_camera: data stats loaded.
+>>> unitree_g1_pack_camera: normalizer initiated.
+>>> Dataset is successfully loaded ...
+>>> Generate 16 frames under each generation ...
+DEBUG:h5py._conv:Creating converter from 3 to 5
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 62 4096
+  0%|          | 0/11 [00:00<?, ?it/s]  9%|▉         | 1/11 [01:07<11:18, 67.88s/it]>>> Step 0: generating actions ...
+>>> Step 0: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 1: generating actions ...
+DEBUG:PIL.Image:Importing BlpImagePlugin
+DEBUG:PIL.Image:Importing BmpImagePlugin
+DEBUG:PIL.Image:Importing BufrStubImagePlugin
+DEBUG:PIL.Image:Importing CurImagePlugin
+DEBUG:PIL.Image:Importing DcxImagePlugin
+DEBUG:PIL.Image:Importing DdsImagePlugin
+DEBUG:PIL.Image:Importing EpsImagePlugin
+DEBUG:PIL.Image:Importing FitsImagePlugin
+DEBUG:PIL.Image:Importing FitsStubImagePlugin
+DEBUG:PIL.Image:Importing FliImagePlugin
+DEBUG:PIL.Image:Importing FpxImagePlugin
+DEBUG:PIL.Image:Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing FtexImagePlugin
+DEBUG:PIL.Image:Importing GbrImagePlugin
+DEBUG:PIL.Image:Importing GifImagePlugin
+DEBUG:PIL.Image:Importing GribStubImagePlugin
+DEBUG:PIL.Image:Importing Hdf5StubImagePlugin
+DEBUG:PIL.Image:Importing IcnsImagePlugin
+DEBUG:PIL.Image:Importing IcoImagePlugin
+DEBUG:PIL.Image:Importing ImImagePlugin
+DEBUG:PIL.Image:Importing ImtImagePlugin
+DEBUG:PIL.Image:Importing IptcImagePlugin
+DEBUG:PIL.Image:Importing JpegImagePlugin
+DEBUG:PIL.Image:Importing Jpeg2KImagePlugin
+DEBUG:PIL.Image:Importing McIdasImagePlugin
+DEBUG:PIL.Image:Importing MicImagePlugin
+DEBUG:PIL.Image:Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing MpegImagePlugin
+DEBUG:PIL.Image:Importing MpoImagePlugin
+DEBUG:PIL.Image:Importing MspImagePlugin
+DEBUG:PIL.Image:Importing PalmImagePlugin
+DEBUG:PIL.Image:Importing PcdImagePlugin
+DEBUG:PIL.Image:Importing PcxImagePlugin
+DEBUG:PIL.Image:Importing PdfImagePlugin
+DEBUG:PIL.Image:Importing PixarImagePlugin
+DEBUG:PIL.Image:Importing PngImagePlugin
+DEBUG:PIL.Image:Importing PpmImagePlugin
+DEBUG:PIL.Image:Importing PsdImagePlugin
+DEBUG:PIL.Image:Importing QoiImagePlugin
+DEBUG:PIL.Image:Importing SgiImagePlugin
+DEBUG:PIL.Image:Importing SpiderImagePlugin
+DEBUG:PIL.Image:Importing SunImagePlugin
+DEBUG:PIL.Image:Importing TgaImagePlugin
+DEBUG:PIL.Image:Importing TiffImagePlugin
+DEBUG:PIL.Image:Importing WebPImagePlugin
+DEBUG:PIL.Image:Importing WmfImagePlugin
+DEBUG:PIL.Image:Importing XbmImagePlugin
+DEBUG:PIL.Image:Importing XpmImagePlugin
+DEBUG:PIL.Image:Importing XVThumbImagePlugin
+ 18%|█▊        | 2/11 [02:16<10:13, 68.13s/it] 27%|██▋       | 3/11 [03:24<09:06, 68.30s/it] 36%|███▋      | 4/11 [04:33<07:58, 68.43s/it] 45%|████▌     | 5/11 [05:41<06:50, 68.45s/it] 55%|█████▍    | 6/11 [06:50<05:42, 68.52s/it] 64%|██████▎   | 7/11 [07:58<04:34, 68.52s/it] 73%|███████▎  | 8/11 [09:07<03:25, 68.51s/it] 82%|████████▏ | 9/11 [10:16<02:17, 68.53s/it] 91%|█████████ | 10/11 [11:24<01:08, 68.53s/it]100%|██████████| 11/11 [12:32<00:00, 68.46s/it]100%|██████████| 11/11 [12:32<00:00, 68.44s/it]
+>>> Step 1: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 2: generating actions ...
+>>> Step 2: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 3: generating actions ...
+>>> Step 3: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 4: generating actions ...
+>>> Step 4: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 5: generating actions ...
+>>> Step 5: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 6: generating actions ...
+>>> Step 6: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 7: generating actions ...
+>>> Step 7: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 8: generating actions ...
+>>> Step 8: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 9: generating actions ...
+>>> Step 9: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Step 10: generating actions ...
+>>> Step 10: interacting with world model ...
+>>>>>>>>>>>>>>>>>>>>>>>>
+DONE 1/1 unitree_z1_dual_arm_stackbox_v2/case1 835.551s
+COMPLETE 1/1

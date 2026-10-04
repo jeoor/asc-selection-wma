@@ -1,0 +1,30 @@
+{
+  "savedir": "/root/autodl-tmp/WMA20/ablation_eval_20261004/full_reload_async/unitree_z1_dual_arm_cleanup_pencils/case1/output",
+  "ckpt_path": "ckpts/unifolm_wma_dual.ckpt",
+  "config": "configs/inference/world_model_interaction.yaml",
+  "prompt_dir": "unitree_z1_dual_arm_cleanup_pencils/case1/world_model_interaction_prompts",
+  "dataset": "unitree_z1_dual_arm_cleanup_pencils",
+  "ddim_steps": 50,
+  "ddim_eta": 1.0,
+  "bs": 1,
+  "height": 320,
+  "width": 512,
+  "frame_stride": [
+    4
+  ],
+  "unconditional_guidance_scale": 1.0,
+  "seed": 123,
+  "video_length": 16,
+  "num_generation": 1,
+  "timestep_spacing": "uniform_trailing",
+  "guidance_rescale": 0.7,
+  "perframe_ae": true,
+  "n_action_steps": 16,
+  "exe_steps": 16,
+  "n_iter": 8,
+  "zero_pred_state": false,
+  "save_fps": 8,
+  "amp_dtype": "fp16",
+  "inference_mode": false,
+  "fp32_decoder": false
+}

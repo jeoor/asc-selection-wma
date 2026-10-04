@@ -1,0 +1,9 @@
+{
+  "baseline_20_total_seconds": 7683.1799999999985,
+  "optimized_20_total_seconds": 5924.33,
+  "speedup": 1.2968858925819458,
+  "lowest_optimized_psnr_db": 25.12008483689618,
+  "case_count": 20,
+  "passes_revised_requirements": true,
+  "problems": []
+}

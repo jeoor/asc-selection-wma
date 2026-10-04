@@ -1,0 +1,32 @@
+{
+  "mode": "reload_async",
+  "cases": [
+    "unitree_g1_pack_camera/case1",
+    "unitree_g1_pack_camera/case2",
+    "unitree_g1_pack_camera/case3",
+    "unitree_g1_pack_camera/case4",
+    "unitree_z1_dual_arm_cleanup_pencils/case1",
+    "unitree_z1_dual_arm_cleanup_pencils/case2",
+    "unitree_z1_dual_arm_cleanup_pencils/case3",
+    "unitree_z1_dual_arm_cleanup_pencils/case4",
+    "unitree_z1_dual_arm_stackbox/case1",
+    "unitree_z1_dual_arm_stackbox/case2",
+    "unitree_z1_dual_arm_stackbox/case3",
+    "unitree_z1_dual_arm_stackbox/case4",
+    "unitree_z1_dual_arm_stackbox_v2/case1",
+    "unitree_z1_dual_arm_stackbox_v2/case2",
+    "unitree_z1_dual_arm_stackbox_v2/case3",
+    "unitree_z1_dual_arm_stackbox_v2/case4",
+    "unitree_z1_stackbox/case1",
+    "unitree_z1_stackbox/case2",
+    "unitree_z1_stackbox/case3",
+    "unitree_z1_stackbox/case4"
+  ],
+  "python": "3.10.18 (main, Jun  5 2025, 13:14:17) [GCC 11.2.0]",
+  "torch": "2.3.1+cu121",
+  "torch_cuda": "12.1",
+  "gpu": "NVIDIA A800 80GB PCIe",
+  "nvidia_smi": "590.48.01, 81920 MiB",
+  "source_sha256": "1659b3f98eec36498213755315396c0677877805c4fa2d3e0ca9052c36c4950c",
+  "allow_tf32": true
+}

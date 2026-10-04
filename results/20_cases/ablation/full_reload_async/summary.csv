@@ -1,0 +1,11 @@
+scenario,case,n_iter,frame_stride,real_seconds
+unitree_g1_pack_camera,case1,11,6,377.845913
+unitree_g1_pack_camera,case2,11,6,371.532326
+unitree_g1_pack_camera,case3,11,6,369.832092
+unitree_g1_pack_camera,case4,11,6,369.255044
+unitree_z1_dual_arm_cleanup_pencils,case1,8,4,285.464522
+unitree_z1_dual_arm_cleanup_pencils,case2,8,4,286.592905
+unitree_z1_dual_arm_cleanup_pencils,case3,8,4,286.659080
+unitree_z1_dual_arm_cleanup_pencils,case4,8,4,287.499936
+unitree_z1_dual_arm_stackbox,case1,7,4,263.764391
+unitree_z1_dual_arm_stackbox,case2,7,4,263.471347

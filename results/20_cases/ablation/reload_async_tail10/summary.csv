@@ -1,0 +1,11 @@
+scenario,case,n_iter,frame_stride,real_seconds
+unitree_z1_dual_arm_stackbox,case3,7,4,272.656643
+unitree_z1_dual_arm_stackbox,case4,7,4,265.930716
+unitree_z1_dual_arm_stackbox_v2,case1,11,4,488.381950
+unitree_z1_dual_arm_stackbox_v2,case2,11,4,379.277694
+unitree_z1_dual_arm_stackbox_v2,case3,11,4,377.846815
+unitree_z1_dual_arm_stackbox_v2,case4,11,4,373.939904
+unitree_z1_stackbox,case1,12,4,397.209231
+unitree_z1_stackbox,case2,12,4,400.717079
+unitree_z1_stackbox,case3,12,4,397.768698
+unitree_z1_stackbox,case4,12,4,395.759135
